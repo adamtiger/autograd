@@ -193,18 +193,18 @@ $$\frac{\partial L}{\partial x_{b,c,i'}} = \sum_{f,i,r;(is+rd=i')} {g_{b,f,i} \c
 In order to arrive a formula wich can be similar to a convolution, we have to get rid of the condition ($is+rd=i'$) and transform the formula something similar to the first equation.
 Let's define a modified version of w and g:
 
-$$w'_{f,c,r'} = \bigg\{ {\begin{matrix} w_{f,c,r}: r'=rd \\\ 0: otherwise \end{matrix}}$$
+$$w_{f,c,r'}' = \bigg\lbrace {\begin{matrix} w_{f,c,r}: r'=rd \\\ 0: otherwise \end{matrix}} $$
 
-$$g'_{b,f,i''} = \bigg\{ {\begin{matrix} g_{b,f,i}: i''=is \\\ 0: otherwise \end{matrix}}$$
+$$g_{b,f,i''}' = \bigg\lbrace {\begin{matrix} g_{b,f,i}: i''=is \\\ 0: otherwise \end{matrix}}$$
 
 This is like padding the G and W matrices internally with zeros (similarly to dilation).
 Then the derivative becomes:
 
-$$\frac{\partial L}{\partial x_{b,c,i'}} = \sum_{f,i;(is+r'=i')} {g_{b,f,i} \cdot w'_{f,c,r'}} = \sum_{f,i''} {g'_{b,f,i''} \cdot w'_{f,c,i'-i''}}$$
+$$\frac{\partial L}{\partial x_{b,c,i'}} = \sum_{f,i;(is+r'=i')} {g_{b,f,i} \cdot w_{f,c,r'}'} = \sum_{f,i''} {g_{b,f,i''}' \cdot w_{f,c,i'-i''}'}$$
 
 Where $i'-i'' = rd = r'$. With some adjustment in the orders of the axes:
 
-$$\frac{\partial L}{\partial x_{b,c,i'}} = \sum_{f,i''} {g'_{b,f,i''} \cdot w'_{c,f,i'-i''}}$$
+$$\frac{\partial L}{\partial x_{b,c,i'}} = \sum_{f,i''} {g_{b,f,i''}' \cdot w_{c,f,i'-i''}'}$$
 
 This formula looks exactly like a convolution but due to the negative sign of $i''$ in the right term, the weights need to be rotated around the spatial axis with 180 degrees (or let's say mirror it). The G' matrix also requires external padding (with zero) to provide valid region for summation.
 
