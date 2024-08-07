@@ -12,8 +12,8 @@ Below is a set of operations with backward implementations.
 ## List of operators
 
 - [Gelu](ops.py#L113) ([explanation](#gelu))
-- [MatMul](ops.py#L207) ([explanation](#matmul))
-- [Convolution](ops.py#L311) ([explanation](#convolution))
+- [MatMul](ops.py#L208) ([explanation](#matmul))
+- [Convolution](ops.py#L316) ([explanation](#convolution))
 
 - [PointwiseAdd](ops.py#L37)
 - [PointwiseSub](ops.py#L47)
@@ -23,14 +23,14 @@ Below is a set of operations with backward implementations.
 - [Cosinus](ops.py#L86)
 - [Exp](ops.py#L95)
 - [Relu](ops.py#L104)
-- [Sigmoid](ops.py#L131)
-- [Reshape](ops.py#L144)
-- [Transpose](ops.py#L160)
-- [Softmax](ops.py#L185)
-- [SumReduce](ops.py#L221)
-- [MeanReduce](ops.py#L235)
-- [MaxReduce](ops.py#L250)
-- [MinReduce](ops.py#L273)
+- [Sigmoid](ops.py#L132)
+- [Reshape](ops.py#L145)
+- [Transpose](ops.py#L161)
+- [Softmax](ops.py#L186)
+- [SumReduce](ops.py#L222)
+- [MeanReduce](ops.py#L236)
+- [MaxReduce](ops.py#L251)
+- [MinReduce](ops.py#L274)
 
 ## Explanations for some of the derivatives
 
