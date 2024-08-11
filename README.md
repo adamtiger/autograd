@@ -49,15 +49,15 @@ $$y = x \cdot \frac{1}{2} \left[ 1 + erf(x / \sqrt{2}) \right]$$
 
 The error function can be defined by the following integral:
 
-$$erf(z) = \frac{2}{\sqrt{\pi}} \int_0^z{\exp^{-t^2}dt}$$
+$$erf(z) = \frac{2}{\sqrt{\pi}} \int_0^z{e^{-t^2}dt}$$
 
 The derivative of the error function is therefore the function inside the integral by definition:
 
-$$erf'(t) = \frac{d erf(z)}{dz} \big|_{z=t} = \frac{2}{\sqrt{\pi}} \exp^{-t^2}$$
+$$erf'(t) = \frac{d erf(z)}{dz} \big|_{z=t} = \frac{2}{\sqrt{\pi}} e^{-t^2}$$
 
 The derivative function for the gelu:
 
-$$y' = \frac{1}{2}\left[ 1 + erf(x / \sqrt{2}) \right] + x \cdot \frac{1}{2} \sqrt{\frac{2}{\pi}} \exp^{-\frac{x^2}{2}}$$
+$$y' = \frac{1}{2}\left[ 1 + erf(x / \sqrt{2}) \right] + x \cdot \frac{1}{2} \sqrt{\frac{2}{\pi}} e^{-\frac{x^2}{2}}$$
 
 ### MatMul
 
